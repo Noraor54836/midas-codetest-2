@@ -47,7 +47,7 @@ function minEnergy(start, shops, stations, target) {
   for (const order in permute(shops)) {
     let total = 0;
     let now = start;
-    console.log(order, "order in permute");
+    // console.log(order, "order in permute");
 
     for (const shop in order) {
       //   console.log(shop, "shop in order");
@@ -74,7 +74,10 @@ function main() {
   let target = 7;
 
   const result = minEnergy(start, shops, stations, target);
-  console.log(result, "answer");
+  console.log(result, "answer"); // 8
+  console.log(minEnergy(5, [2, 7], [1, 3, 7], 0)); //5
+  console.log(minEnergy(0, [5], [2, 5], 10)); //10
+  console.log(minEnergy(5, [], [1, 2], 0)); //5
 }
 
 main();
